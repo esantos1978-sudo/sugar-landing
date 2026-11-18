@@ -1,5 +1,5 @@
 /**
- * SUGAR® — Urban Streetwear
+ * SUGR® — Urban Streetwear
  * Reveal progresivo de los productos al entrar en el viewport.
  */
 document.addEventListener('DOMContentLoaded', () => {
