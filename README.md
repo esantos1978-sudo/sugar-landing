@@ -49,12 +49,12 @@ Underneath that aggressive surface lives a **conversion-first e-commerce UX**: t
 
 ## ✨ Key Features
 
-- ✅ **Asymmetric CSS Grid** — A 12-column layout (`grid-template-columns: repeat(12, 1fr)`) where the hero product spans 7 columns and 2 rows while the remaining drops stack at 5 columns. The result is a dynamic, editorial product grid instead of yet another uniform card wall.
+- ✅ **Asymmetric CSS Grid** — A 12-column layout (`grid-template-columns: repeat(12, 1fr)`) that mixes scales on purpose: the hero product spans 7 columns × 2 rows, two drops stack at 5 columns beside it, and the three latest additions close the composition in a clean 4/4/4 row. Editorial rhythm instead of yet another uniform card wall.
 - ✅ **E-Commerce UX** — Interactive size selector (`aria-pressed` state synced with the active class) and a *Quick Add* button that confirms the exact product **and** size in a live Toast notification — no page reload, no dead-end click.
 - ✅ **Next Drop / Waitlist Section** — A second, uniform 4-up grid (`.next-drop-grid`) for the upcoming collection, with neon `COMING SOON` badges and non-destructive *Notify Me* buttons that confirm with a 2-second `REGISTERED ✓` state. Collapses to 2 columns on tablet and 1 column on mobile.
 - ✅ **Scroll-Snap Lookbook** — Full-bleed horizontal gallery using `scroll-snap-type: x mandatory` + `scroll-snap-align: center`, with a hidden scrollbar for a native-app feel on touch devices.
 - ✅ **Mobile-First Navigation** — Fixed bottom navigation bar on mobile (`≤ 768px`), engineered around the thumb-zone and padded with `env(safe-area-inset-bottom)` so it never collides with iOS gesture bars.
-- ✅ **Performance Optimized** — WebP assets, `fetchpriority="high"` + `loading="eager"` on the LCP hero image, and `loading="lazy"` + `decoding="async"` on everything below the fold.
+- ✅ **Performance Optimized** — Compressed WebP/JPEG assets (the newest product shots are 58 KB and 29 KB), `fetchpriority="high"` + `loading="eager"` on the LCP hero image, and `loading="lazy"` + `decoding="async"` on everything below the fold.
 - ✅ **Zero Bloat** — 100% Vanilla JS (no jQuery, no React) and Tailwind CSS via CDN. No `npm install`, no bundler, no hydration cost.
 - ✅ **Progressive Enhancement** — The page is fully readable without JavaScript thanks to a `<noscript>` fallback that reveals every `.fade-in` element; commerce interactions simply layer on top.
 - ✅ **Motion That Respects Users** — Scroll reveals use `IntersectionObserver`, and the entire motion layer is disabled under `prefers-reduced-motion: reduce`, both in CSS and in JS.
@@ -95,7 +95,10 @@ sugar-landing/
 │       ├── lookbook-03.webp    # Lookbook slide 03
 │       ├── tee-black.png       # Product: Heavyweight Tee / Black
 │       ├── tee-sage.png        # Product: Logo Tee / Sage
-│       └── tee-flamingo.png    # Product: Graphic Tee / Flamingo
+│       ├── tee-flamingo.png    # Product: Graphic Tee / Flamingo
+│       ├── tee-04.jpeg         # Product: Koi Graphic Tee / Black
+│       ├── tee-05.jpeg         # Product: Essential Tee / Off White
+│       └── tee-06.jpeg         # Product: Bird Graphic Tee / Sage
 └── README.md           # You are here
 ```
 

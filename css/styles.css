@@ -177,6 +177,13 @@ img { display: block; max-width: 100%; }
 .product-item:nth-child(1) { grid-column: span 7; grid-row: span 2; }
 .product-item:nth-child(2) { grid-column: span 5; }
 .product-item:nth-child(3) { grid-column: span 5; }
+/* Fila inferior: 3 productos ocupando 4 columnas cada uno (4+4+4 = 12) */
+.product-item:nth-child(4),
+.product-item:nth-child(5),
+.product-item:nth-child(6) {
+    grid-column: span 4;
+    grid-row: auto;
+}
 
 .product-img-wrap {
     width: 100%;
