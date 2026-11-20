@@ -9,7 +9,7 @@
     --text: #f4f4f5;
     --line: rgba(255, 255, 255, 0.1);
     --muted: #666;
-    --accent: #39ff14;
+    --accent: #ff0099; /* Rosa neón (antes #39ff14) */
 }
 
 /* ---------- Reset mínimo ---------- */
@@ -562,7 +562,9 @@ footer {
     position: fixed;
     bottom: 2rem;
     left: 50%;
-    transform: translateX(-50%) translateY(150%);
+    /* Oculto de verdad: 100% de su alto + el offset inferior (2rem/5rem),
+       si no en móvil asoma por encima de la bottom nav. */
+    transform: translateX(-50%) translateY(calc(100% + 6rem));
     background: #000;
     border: 1px solid var(--accent);
     color: var(--text);
@@ -631,9 +633,76 @@ footer {
     letter-spacing: 0.1em;
 }
 
+/* --- Next Drop Section --- */
+.next-drop-section {
+    padding: 6rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: #000;
+}
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.section-label {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.section-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+    margin: 0 0 1rem 0;
+}
+.section-subtitle {
+    font-size: 1rem;
+    color: #666;
+    max-width: 500px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+/* Grid específico para Next Drop (4 columnas iguales en desktop) */
+.next-drop-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.next-drop-grid .product-item {
+    grid-column: span 3; /* 4 items * 3 = 12 columnas */
+    grid-row: auto;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.next-drop-grid .product-item:hover {
+    border-color: var(--accent);
+}
+
+/* Botón Notify Me (variante del Quick Add) */
+.notify-btn {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+}
+.notify-btn:hover {
+    background: var(--accent);
+    color: #000;
+}
+/* Estado de confirmación temporal (lo aplica script.js) */
+.notify-btn.registered {
+    background: var(--accent);
+    color: #000;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
     .hero-image-container { width: 50vw; height: 50vh; }
+    /* Next Drop: 2 columnas en tablet (evita cards de ~180px) */
+    .next-drop-grid .product-item { grid-column: span 6; }
 }
 
 @media (max-width: 768px) {
@@ -649,6 +718,7 @@ footer {
     .product-item:nth-child(n) { grid-column: span 12; grid-row: auto; }
     body { padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px)); }
     .mobile-bottom-nav { display: flex; }
+    .next-drop-grid .product-item { grid-column: span 12; /* 1 columna en móvil */ }
     .cart-toast { bottom: 5rem; max-width: calc(100vw - 2rem); }
     .bottom-marquee { padding: 3rem 0; }
     .marquee-text { font-size: clamp(2.5rem, 14vw, 6rem); }

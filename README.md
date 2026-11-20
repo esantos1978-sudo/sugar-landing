@@ -37,7 +37,7 @@
 
 **SUGR®** is a premium streetwear label built on authenticity: *"Born in the block."* This landing page is not a generic template with a logo dropped on top — it is a brand artefact designed to make the visitor **feel the street before they see the price**.
 
-The visual language is **Neo-Brutalism**: raw 1px borders, oversized **Unbounded** typography, outlined headline text, full-bleed monochrome photography and a single acid-green accent (`#39FF14`) used with surgical restraint. Nothing is soft, nothing is rounded, nothing is decorative for the sake of it.
+The visual language is **Neo-Brutalism**: raw 1px borders, oversized **Unbounded** typography, outlined headline text, full-bleed monochrome photography and a single neon-pink accent (`#FF0099`) used with surgical restraint. Nothing is soft, nothing is rounded, nothing is decorative for the sake of it.
 
 Underneath that aggressive surface lives a **conversion-first e-commerce UX**: thumb-reachable navigation, preselected sizes, a single-tap *Quick Add* flow and instant feedback on every action. The result is a storefront that reads like an editorial, behaves like a native app, and loads like a static page.
 
@@ -51,6 +51,7 @@ Underneath that aggressive surface lives a **conversion-first e-commerce UX**: t
 
 - ✅ **Asymmetric CSS Grid** — A 12-column layout (`grid-template-columns: repeat(12, 1fr)`) where the hero product spans 7 columns and 2 rows while the remaining drops stack at 5 columns. The result is a dynamic, editorial product grid instead of yet another uniform card wall.
 - ✅ **E-Commerce UX** — Interactive size selector (`aria-pressed` state synced with the active class) and a *Quick Add* button that confirms the exact product **and** size in a live Toast notification — no page reload, no dead-end click.
+- ✅ **Next Drop / Waitlist Section** — A second, uniform 4-up grid (`.next-drop-grid`) for the upcoming collection, with neon `COMING SOON` badges and non-destructive *Notify Me* buttons that confirm with a 2-second `REGISTERED ✓` state. Collapses to 2 columns on tablet and 1 column on mobile.
 - ✅ **Scroll-Snap Lookbook** — Full-bleed horizontal gallery using `scroll-snap-type: x mandatory` + `scroll-snap-align: center`, with a hidden scrollbar for a native-app feel on touch devices.
 - ✅ **Mobile-First Navigation** — Fixed bottom navigation bar on mobile (`≤ 768px`), engineered around the thumb-zone and padded with `env(safe-area-inset-bottom)` so it never collides with iOS gesture bars.
 - ✅ **Performance Optimized** — WebP assets, `fetchpriority="high"` + `loading="eager"` on the LCP hero image, and `loading="lazy"` + `decoding="async"` on everything below the fold.
@@ -100,6 +101,8 @@ sugar-landing/
 
 No transpilation, no minification step, no config archaeology: what you clone is what ships.
 
+> ⚠️ **Next Drop assets:** the four products in `#next-drop` currently point to temporary Unsplash URLs. Replace them with `assets/images/next-01.webp` … `next-04.webp` before the final deploy (the `TODO` comment in `index.html` marks the exact spot).
+
 ---
 
 ## ⚡ Performance & Accessibility
@@ -138,7 +141,7 @@ Every visual decision is driven by a small, documented set of tokens in `css/sty
 | :--- | :--- | :--- |
 | `--bg` | `#0A0A0A` | Page canvas — near-black, never pure `#000` for body copy comfort |
 | `--text` | `#F4F4F5` | Primary type, 1px borders, SVG logotype |
-| `--accent` | `#39FF14` | Acid green: active states, CTAs, ticker, scarcity signals |
+| `--accent` | `#FF0099` | Neon pink: active states, CTAs, ticker, scarcity and waitlist signals |
 | `--muted` | `#666666` | Secondary metadata, inactive nav items |
 | `--line` | `rgba(255,255,255,0.1)` | The brutalist hairline grid that holds the layout together |
 | Display font | `Unbounded` 300–900 | Headlines, prices, buttons, labels |
@@ -189,12 +192,12 @@ Design is only valuable when it moves a business metric. These are the deliberat
 | **Quick Add** with inline confirmation | A single tap from interest to bag — no product page detour | `js/script.js` |
 | **Contextual Toast** (`PRODUCT (SIZE) ADDED TO BAG`) | Instant, unambiguous feedback, announced to screen readers | `#cart-toast` |
 | **Thumb-zone bottom nav** | Mobile users never stretch to reach navigation | `.mobile-bottom-nav` |
-| **Featured product with neon border + `EDITION 100`** | Creates a visual hierarchy and a focal point in the grid | `.featured-item` |
+| **Featured product with neon border + `EDITION 100`** | Creates a visual hierarchy and a focal point in the grid | `.product-item:nth-child(3)` |
 | **Scarcity messaging** (`NO RESTOCKS`, `0 Restocks`) | Frames the drop as time-sensitive and limited | Ticker / manifesto stats |
 | **Quality proof** (`320 GSM`, `GARMENT DYED`, `100% Organic Cotton`) | Justifies premium pricing at a glance | Product badges / stats |
 | **Editorial motion** (scroll reveals, marquees) | Guides the eye through the story without a single carousel plugin | `.fade-in`, `IntersectionObserver` |
 
-The page tells a story in a fixed order — **identity → origins → product → manifesto → social proof** — so the visitor is emotionally primed before seeing a price.
+The page tells a story in a fixed order — **identity → origins → product → next drop → manifesto → social proof** — so the visitor is emotionally primed before seeing a price.
 
 ---
 
@@ -205,6 +208,7 @@ The current build is a complete, conversion-oriented front end on purpose: it va
 - [ ] **Cart drawer + persistence** — promote the existing Toast into a real bag using `localStorage`.
 - [ ] **Checkout integration** — Stripe Checkout or Shopify Buy Button, wired to the existing product cards.
 - [ ] **Size guide** — accessible modal (`<dialog>`) triggered from each size selector.
+- [ ] **Waitlist backend** — persist *Notify Me* signups (email + ESP/webhook) instead of the local 2-second confirmation state.
 - [ ] **Content layer** — move products to Markdown/JSON or a headless CMS so drops ship without touching markup.
 - [ ] **Production CSS build** — compile Tailwind with the CLI and purge unused utilities to replace the CDN runtime.
 - [ ] **Analytics & events** — instrument `quick_add`, size changes and lookbook engagement.
@@ -227,7 +231,7 @@ The current build is a complete, conversion-oriented front end on purpose: it va
 **Need a storefront like this for your brand?**
 Let's turn your drop into a conversion machine.
 
-[![Live Demo](https://img.shields.io/badge/View_Live_Site-39FF14?style=for-the-badge&logo=vercel&logoColor=black)](https://sugar-landing.vercel.app)
+[![Live Demo](https://img.shields.io/badge/View_Live_Site-FF0099?style=for-the-badge&logo=vercel&logoColor=black)](https://sugar-landing.vercel.app)
 [![GitHub](https://img.shields.io/badge/Source_Code-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/esantos1978-sudo/sugar-landing)
 
 <sub>SUGR® — Streetwear E-Commerce Landing · Neo-Brutalism meets high-conversion UX.</sub>

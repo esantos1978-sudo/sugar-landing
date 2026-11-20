@@ -112,4 +112,28 @@ document.addEventListener('DOMContentLoaded', () => {
             item.setAttribute('aria-current', 'true');
         });
     });
+
+    // 4. "Notify Me" Feedback (Next Drop): no añade al carrito, solo confirma
+    //    el registro con un estado temporal. Usamos una clase (no estilos
+    //    inline) para no romper el :hover definido en CSS.
+    document.querySelectorAll('.notify-btn').forEach(btn => {
+        const label = btn.querySelector('.btn-text');
+        if (!label) return;
+
+        const originalText = label.textContent;
+        let resetTimeout;
+
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            clearTimeout(resetTimeout);
+
+            label.textContent = 'REGISTERED ✓';
+            btn.classList.add('registered');
+
+            resetTimeout = setTimeout(() => {
+                label.textContent = originalText;
+                btn.classList.remove('registered');
+            }, 2000);
+        });
+    });
 });
