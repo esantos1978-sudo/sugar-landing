@@ -108,7 +108,9 @@ img { display: block; max-width: 100%; }
     line-height: 0.85;
     letter-spacing: -0.02em;
     text-transform: uppercase;
-    margin: 0;
+    /* Baja el título dentro del hero (que está centrado con flex) para
+       equilibrarlo con la imagen de fondo. */
+    margin: 5vh 0 0;
     position: relative;
     z-index: 10;
 }
