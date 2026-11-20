@@ -82,17 +82,76 @@
             </div>
 
             <div class="product-grid">
-                <div class="product-item fade-in">
-                    <div class="product-img-wrap"><img src="assets/images/tee-black.png" alt="Heavyweight Tee Black"></div>
-                    <div class="product-details"><span>HEAVYWEIGHT TEE / BLACK</span><span>€55.00</span></div>
+                <!-- ITEM 1: BLACK TEE -->
+                <div class="product-item fade-in" data-product="tee-black">
+                    <div class="product-img-wrap">
+                        <img src="assets/images/tee-black.png" alt="SUGR Heavyweight Tee Black" loading="lazy">
+                        <div class="product-badge">320 GSM</div>
+                    </div>
+                    <div class="product-info-rich">
+                        <div class="product-header">
+                            <h3 class="product-name">HEAVYWEIGHT TEE / BLACK</h3>
+                            <span class="product-price">€55.00</span>
+                        </div>
+                        <div class="size-selector">
+                            <span class="size-label">SIZE:</span>
+                            <button class="size-btn" type="button" data-size="S">S</button>
+                            <button class="size-btn active" type="button" data-size="M">M</button>
+                            <button class="size-btn" type="button" data-size="L">L</button>
+                            <button class="size-btn" type="button" data-size="XL">XL</button>
+                        </div>
+                        <button class="quick-add-btn" type="button">
+                            <span class="btn-text">QUICK ADD +</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="product-item fade-in">
-                    <div class="product-img-wrap"><img src="assets/images/tee-sage.png" alt="Logo Tee Sage"></div>
-                    <div class="product-details"><span>LOGO TEE / SAGE</span><span>€50.00</span></div>
+
+                <!-- ITEM 2: SAGE TEE -->
+                <div class="product-item fade-in" data-product="tee-sage">
+                    <div class="product-img-wrap">
+                        <img src="assets/images/tee-sage.png" alt="SUGR Logo Tee Sage" loading="lazy">
+                        <div class="product-badge">GARMENT DYED</div>
+                    </div>
+                    <div class="product-info-rich">
+                        <div class="product-header">
+                            <h3 class="product-name">LOGO TEE / SAGE</h3>
+                            <span class="product-price">€50.00</span>
+                        </div>
+                        <div class="size-selector">
+                            <span class="size-label">SIZE:</span>
+                            <button class="size-btn" type="button" data-size="S">S</button>
+                            <button class="size-btn" type="button" data-size="M">M</button>
+                            <button class="size-btn active" type="button" data-size="L">L</button>
+                            <button class="size-btn" type="button" data-size="XL">XL</button>
+                        </div>
+                        <button class="quick-add-btn" type="button">
+                            <span class="btn-text">QUICK ADD +</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="product-item fade-in">
-                    <div class="product-img-wrap"><img src="assets/images/tee-flamingo.png" alt="Graphic Tee Flamingo"></div>
-                    <div class="product-details"><span>GRAPHIC TEE / FLAMINGO</span><span>€50.00</span></div>
+
+                <!-- ITEM 3: FLAMINGO TEE (Destacado) -->
+                <div class="product-item fade-in featured-item" data-product="tee-flamingo">
+                    <div class="product-img-wrap">
+                        <img src="assets/images/tee-flamingo.png" alt="SUGR Graphic Tee Flamingo" loading="lazy">
+                        <div class="product-badge neon-badge">EDITION 100</div>
+                    </div>
+                    <div class="product-info-rich">
+                        <div class="product-header">
+                            <h3 class="product-name">GRAPHIC TEE / FLAMINGO</h3>
+                            <span class="product-price">€50.00</span>
+                        </div>
+                        <div class="size-selector">
+                            <span class="size-label">SIZE:</span>
+                            <button class="size-btn active" type="button" data-size="S">S</button>
+                            <button class="size-btn" type="button" data-size="M">M</button>
+                            <button class="size-btn" type="button" data-size="L">L</button>
+                            <button class="size-btn" type="button" data-size="XL">XL</button>
+                        </div>
+                        <button class="quick-add-btn" type="button">
+                            <span class="btn-text">QUICK ADD +</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -160,6 +219,28 @@
             <a href="#" class="hover:text-gray-400">Contact</a>
         </div>
     </footer>
+
+    <!-- Toast Notification -->
+    <div class="cart-toast" id="cart-toast" role="status" aria-live="polite">
+        <span class="toast-icon" aria-hidden="true">✓</span>
+        <span class="toast-message" id="toast-message">ITEM ADDED TO BAG</span>
+    </div>
+
+    <!-- Mobile Bottom Navigation (visible only on mobile) -->
+    <nav class="mobile-bottom-nav" aria-label="Navegación móvil">
+        <a href="#drops" class="nav-item active">
+            <span class="nav-icon" aria-hidden="true">▦</span>
+            <span class="nav-label">STORE</span>
+        </a>
+        <a href="#lookbook" class="nav-item">
+            <span class="nav-icon" aria-hidden="true">◫</span>
+            <span class="nav-label">LOOKS</span>
+        </a>
+        <a href="#manifesto" class="nav-item">
+            <span class="nav-icon" aria-hidden="true">◈</span>
+            <span class="nav-label">INFO</span>
+        </a>
+    </nav>
 
     <script src="js/script.js"></script>
 </body>
