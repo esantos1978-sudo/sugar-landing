@@ -1,0 +1,621 @@
+{
+  "generatedAt": "2026-11-21T11:14:28.459Z",
+  "viewport": "1600x1000 + 390x844",
+  "images": {
+    "ok": true,
+    "total": 15
+  },
+  "passed": 32,
+  "failed": 0,
+  "checks": [
+    {
+      "name": ":root declara las variables de la nueva paleta",
+      "ok": true,
+      "detail": {
+        "--bg": "#ffffff",
+        "--text": "#0a0a0a",
+        "--accent": "#ff0099",
+        "--surface": "#f4f4f4",
+        "--border": "#0a0a0a",
+        "--border-light": "rgba(0, 0, 0, 0.1)",
+        "--muted": "#666666",
+        "--accent-hover": "#d4007f",
+        "--accent-contrast": "#0a0a0a",
+        "--inverse-text": "#fafafa",
+        "--inverse-muted": "#a1a1aa",
+        "--photo-bg": "#e7e7e6"
+      }
+    },
+    {
+      "name": "body: fondo blanco puro y texto negro casi puro",
+      "ok": true,
+      "detail": {
+        "background-color": "rgb(255, 255, 255)",
+        "color": "rgb(10, 10, 10)"
+      }
+    },
+    {
+      "name": "ticker superior: fucsia con texto negro y linea negra",
+      "ok": true,
+      "detail": {
+        "background-color": "rgb(255, 0, 153)",
+        "color": "rgb(10, 10, 10)",
+        "border-bottom-color": "rgb(10, 10, 10)"
+      }
+    },
+    {
+      "name": "nav sobre blanco: borde negro y enlace negro -> fucsia al hover",
+      "ok": true,
+      "detail": {
+        "nav": {
+          "background-color": "rgba(0, 0, 0, 0)",
+          "border-bottom-color": "rgb(10, 10, 10)"
+        },
+        "idle": "rgb(10, 10, 10)",
+        "hover": "rgb(212, 0, 127)"
+      }
+    },
+    {
+      "name": "logo SVG hereda color: negro en nav, blanco en footer",
+      "ok": true,
+      "detail": {
+        "nav": "rgb(10, 10, 10)",
+        "footer": "rgb(250, 250, 250)"
+      }
+    },
+    {
+      "name": "hero: titular negro, outline negro, meta sutil y scroll en fucsia",
+      "ok": true,
+      "detail": {
+        "hero": "rgb(10, 10, 10)",
+        "outline": "rgb(10, 10, 10)",
+        "meta": "rgba(0, 0, 0, 0.1)",
+        "scroll": "rgb(212, 0, 127)"
+      }
+    },
+    {
+      "name": "hero: velo blanco sobre la foto garantiza lectura del titular",
+      "ok": true,
+      "detail": {
+        "background-color": "rgba(255, 255, 255, 0.55)",
+        "content": "\"\"",
+        "pointer-events": "none"
+      }
+    },
+    {
+      "name": "grid blanco separado por linea negra; contador en fucsia",
+      "ok": true,
+      "detail": {
+        "grid": {
+          "background-color": "rgb(255, 255, 255)",
+          "border-top-color": "rgb(10, 10, 10)"
+        },
+        "counter": "rgb(212, 0, 127)"
+      }
+    },
+    {
+      "name": "plato de foto con el gris real del estudio (sin halo)",
+      "ok": true,
+      "detail": {
+        "background-color": "rgb(231, 231, 230)"
+      }
+    },
+    {
+      "name": "tarjeta en reposo: blanca con borde negro 1px y sin sombra",
+      "ok": true,
+      "detail": {
+        "background-color": "rgb(255, 255, 255)",
+        "border-top-color": "rgb(10, 10, 10)",
+        "border-top-width": "1px",
+        "box-shadow": "none"
+      }
+    },
+    {
+      "name": "hover: borde fucsia + sombra dura brutalista sin reflow",
+      "ok": true,
+      "detail": {
+        "hover": {
+          "border-top-color": "rgb(255, 0, 153)",
+          "box-shadow": "rgb(255, 0, 153) 4px 4px 0px 0px"
+        },
+        "idleRect": {
+          "x": 32,
+          "y": 1964,
+          "w": 889.3,
+          "h": 1673.7
+        },
+        "hoverRect": {
+          "x": 32,
+          "y": -238,
+          "w": 889.3,
+          "h": 1673.7
+        }
+      }
+    },
+    {
+      "name": "panel de compra blanco separado por linea sutil",
+      "ok": true,
+      "detail": {
+        "background-color": "rgb(255, 255, 255)",
+        "border-top-color": "rgba(0, 0, 0, 0.1)"
+      }
+    },
+    {
+      "name": "precio en fucsia legible y badges (blanco / fucsia) coherentes",
+      "ok": true,
+      "detail": {
+        "price": "rgb(212, 0, 127)",
+        "badge": {
+          "background-color": "rgb(255, 255, 255)",
+          "color": "rgb(10, 10, 10)",
+          "border-top-color": "rgb(10, 10, 10)"
+        },
+        "neonBadge": {
+          "background-color": "rgb(255, 0, 153)",
+          "color": "rgb(10, 10, 10)"
+        }
+      }
+    },
+    {
+      "name": "tallas: outline negro y talla activa en negro con texto blanco",
+      "ok": true,
+      "detail": {
+        "sizeIdle": {
+          "background-color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(10, 10, 10)",
+          "border-top-color": "rgb(10, 10, 10)"
+        },
+        "sizeActive": {
+          "background-color": "rgb(10, 10, 10)",
+          "color": "rgb(255, 255, 255)",
+          "border-top-color": "rgb(10, 10, 10)"
+        }
+      }
+    },
+    {
+      "name": "Quick Add: negro/texto blanco -> fucsia/texto negro al hover",
+      "ok": true,
+      "detail": {
+        "idle": {
+          "background-color": "rgb(10, 10, 10)",
+          "color": "rgb(255, 255, 255)",
+          "border-top-color": "rgb(10, 10, 10)",
+          "border-top-width": "1px"
+        },
+        "hover": {
+          "background-color": "rgb(255, 0, 153)",
+          "color": "rgb(10, 10, 10)",
+          "border-top-color": "rgb(255, 0, 153)"
+        }
+      }
+    },
+    {
+      "name": "fotos integradas sin halo con el plato (delta max <= 10/255)",
+      "ok": true,
+      "detail": {
+        "worst": {
+          "src": "assets/images/tee-05.jpeg",
+          "avg": [
+            222,
+            222,
+            222
+          ],
+          "wrap": "rgb(231, 231, 230)",
+          "delta": 9
+        },
+        "all": [
+          {
+            "src": "assets/images/tee-black.png",
+            "avg": [
+              229,
+              229,
+              229
+            ],
+            "wrap": "rgb(231, 231, 230)",
+            "delta": 2
+          },
+          {
+            "src": "assets/images/tee-sage.png",
+            "avg": [
+              233,
+              233,
+              232
+            ],
+            "wrap": "rgb(231, 231, 230)",
+            "delta": 2
+          },
+          {
+            "src": "assets/images/tee-flamingo.png",
+            "avg": [
+              230,
+              230,
+              229
+            ],
+            "wrap": "rgb(231, 231, 230)",
+            "delta": 1
+          },
+          {
+            "src": "assets/images/tee-04.jpeg",
+            "avg": [
+              228,
+              228,
+              228
+            ],
+            "wrap": "rgb(231, 231, 230)",
+            "delta": 3
+          },
+          {
+            "src": "assets/images/tee-05.jpeg",
+            "avg": [
+              222,
+              222,
+              222
+            ],
+            "wrap": "rgb(231, 231, 230)",
+            "delta": 9
+          },
+          {
+            "src": "assets/images/tee-06.jpeg",
+            "avg": [
+              238,
+              238,
+              237
+            ],
+            "wrap": "rgb(231, 231, 230)",
+            "delta": 7
+          }
+        ]
+      }
+    },
+    {
+      "name": "Next Drop sobre blanco con tarjetas de borde negro y badges fucsia",
+      "ok": true,
+      "detail": {
+        "nextDrop": {
+          "background-color": "rgb(255, 255, 255)",
+          "border-top-color": "rgb(10, 10, 10)"
+        },
+        "nextCard": {
+          "background-color": "rgb(255, 255, 255)",
+          "border-top-color": "rgb(10, 10, 10)"
+        },
+        "nextBadge": {
+          "background-color": "rgb(255, 0, 153)",
+          "color": "rgb(10, 10, 10)"
+        }
+      }
+    },
+    {
+      "name": "Next Drop: kicker/entradilla legibles (fucsia AA + gris)",
+      "ok": true,
+      "detail": {
+        "sectionLabel": "rgb(212, 0, 127)",
+        "sectionSubtitle": "rgb(102, 102, 102)"
+      }
+    },
+    {
+      "name": "Notify Me: outline negro -> relleno fucsia con texto negro",
+      "ok": true,
+      "detail": {
+        "idle": {
+          "background-color": "rgba(0, 0, 0, 0)",
+          "color": "rgb(10, 10, 10)",
+          "border-top-color": "rgb(10, 10, 10)"
+        },
+        "hover": {
+          "background-color": "rgb(255, 0, 153)",
+          "color": "rgb(10, 10, 10)",
+          "border-top-color": "rgb(255, 0, 153)"
+        }
+      }
+    },
+    {
+      "name": "manifesto: superficie #f4f4f4 con linea negra y tipografia negra",
+      "ok": true,
+      "detail": {
+        "manifesto": {
+          "background-color": "rgb(244, 244, 244)",
+          "border-top-color": "rgb(10, 10, 10)"
+        },
+        "manifestoTitle": {
+          "color": "rgb(10, 10, 10)"
+        },
+        "statNum": {
+          "color": "rgb(10, 10, 10)"
+        }
+      }
+    },
+    {
+      "name": "manifesto: texto secundario gris AA y acento fucsia legible",
+      "ok": true,
+      "detail": {
+        "body": "rgb(102, 102, 102)",
+        "neon": "rgb(212, 0, 127)",
+        "label": "rgb(102, 102, 102)",
+        "line": "rgba(0, 0, 0, 0.1)"
+      }
+    },
+    {
+      "name": "Bleed: titular claro + foto oscurecida (BORN IN THE BLOCK legible)",
+      "ok": true,
+      "detail": {
+        "title": "rgb(250, 250, 250)",
+        "outline": "rgb(250, 250, 250)",
+        "sub": "rgb(161, 161, 170)",
+        "filter": {
+          "filter": "grayscale(1) contrast(1.15) brightness(0.35)"
+        }
+      }
+    },
+    {
+      "name": "lookbook blanco: titulo negro, kicker y numeros fucsia, pie gris",
+      "ok": true,
+      "detail": {
+        "look": {
+          "background-color": "rgb(255, 255, 255)",
+          "border-top-color": "rgb(10, 10, 10)"
+        },
+        "lookLabel": "rgb(212, 0, 127)",
+        "lookCaption": "rgb(102, 102, 102)",
+        "lookIndex": "rgb(212, 0, 127)"
+      }
+    },
+    {
+      "name": "footer negro: peso visual del 30% y texto claro legible",
+      "ok": true,
+      "detail": {
+        "footer": {
+          "background-color": "rgb(10, 10, 10)",
+          "color": "rgb(250, 250, 250)"
+        },
+        "footerText": "rgb(161, 161, 170)",
+        "link": "rgb(250, 250, 250)",
+        "hover": "rgb(255, 0, 153)"
+      }
+    },
+    {
+      "name": "toast oculto en reposo (debajo del viewport, sin clase visible)",
+      "ok": true,
+      "detail": {
+        "hasVisibleClass": false,
+        "top": 1064,
+        "viewportHeight": 1000,
+        "translate": "matrix(1, 0, 0, 1, -120.508, 158.797)"
+      }
+    },
+    {
+      "name": "toast negro con borde fucsia y texto claro (contraste alto)",
+      "ok": true,
+      "detail": {
+        "background-color": "rgb(10, 10, 10)",
+        "color": "rgb(250, 250, 250)",
+        "border-top-color": "rgb(255, 0, 153)",
+        "box-shadow": "rgba(0, 0, 0, 0.18) 0px 10px 30px 0px"
+      }
+    },
+    {
+      "name": "marquee inferior: texto negro entre dos lineas negras",
+      "ok": true,
+      "detail": {
+        "bottomMarquee": {
+          "border-top-color": "rgb(10, 10, 10)",
+          "border-bottom-color": "rgb(10, 10, 10)"
+        },
+        "marqueeText": "rgb(10, 10, 10)"
+      }
+    },
+    {
+      "name": "contraste AA en todos los pares de texto de la paleta",
+      "ok": true,
+      "detail": {
+        "failing": [],
+        "all": [
+          {
+            "name": "texto negro / blanco",
+            "ratio": 19.8,
+            "min": 12
+          },
+          {
+            "name": "texto secundario #666 / blanco",
+            "ratio": 5.74,
+            "min": 4.5
+          },
+          {
+            "name": "texto secundario #666 / #f4f4f4",
+            "ratio": 5.22,
+            "min": 4.5
+          },
+          {
+            "name": "fucsia #d4007f / blanco",
+            "ratio": 5.11,
+            "min": 4.5
+          },
+          {
+            "name": "fucsia #d4007f / #f4f4f4",
+            "ratio": 4.65,
+            "min": 4.5
+          },
+          {
+            "name": "negro sobre fucsia (CTA hover)",
+            "ratio": 5.39,
+            "min": 4.5
+          },
+          {
+            "name": "blanco sobre negro (CTA)",
+            "ratio": 19.8,
+            "min": 4.5
+          },
+          {
+            "name": "blanco sobre negro (footer)",
+            "ratio": 18.97,
+            "min": 4.5
+          },
+          {
+            "name": "#a1a1aa sobre negro (footer meta)",
+            "ratio": 7.72,
+            "min": 4.5
+          },
+          {
+            "name": "fucsia #ff0099 sobre negro (footer hover)",
+            "ratio": 5.39,
+            "min": 4.5
+          }
+        ]
+      }
+    },
+    {
+      "name": "desktop 1600px sin scroll horizontal",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 1600,
+        "clientWidth": 1600,
+        "overflow": false
+      }
+    },
+    {
+      "name": "movil 390px sin scroll horizontal",
+      "ok": true,
+      "detail": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "overflow": false
+      }
+    },
+    {
+      "name": "bottom nav movil: fondo blanco puro, linea negra, iconos negros y activo fucsia",
+      "ok": true,
+      "detail": {
+        "bottomNav": {
+          "display": "flex",
+          "background-color": "rgb(255, 255, 255)",
+          "border-top-color": "rgb(10, 10, 10)"
+        },
+        "idle": "rgb(10, 10, 10)",
+        "active": "rgb(212, 0, 127)"
+      }
+    },
+    {
+      "name": "movil: titular negro y velo mas ligero sobre la foto",
+      "ok": true,
+      "detail": {
+        "title": "rgb(10, 10, 10)",
+        "scrim": "rgba(255, 255, 255, 0.35)"
+      }
+    }
+  ],
+  "contrast": [
+    {
+      "name": "texto negro / blanco",
+      "ratio": 19.8,
+      "min": 12
+    },
+    {
+      "name": "texto secundario #666 / blanco",
+      "ratio": 5.74,
+      "min": 4.5
+    },
+    {
+      "name": "texto secundario #666 / #f4f4f4",
+      "ratio": 5.22,
+      "min": 4.5
+    },
+    {
+      "name": "fucsia #d4007f / blanco",
+      "ratio": 5.11,
+      "min": 4.5
+    },
+    {
+      "name": "fucsia #d4007f / #f4f4f4",
+      "ratio": 4.65,
+      "min": 4.5
+    },
+    {
+      "name": "negro sobre fucsia (CTA hover)",
+      "ratio": 5.39,
+      "min": 4.5
+    },
+    {
+      "name": "blanco sobre negro (CTA)",
+      "ratio": 19.8,
+      "min": 4.5
+    },
+    {
+      "name": "blanco sobre negro (footer)",
+      "ratio": 18.97,
+      "min": 4.5
+    },
+    {
+      "name": "#a1a1aa sobre negro (footer meta)",
+      "ratio": 7.72,
+      "min": 4.5
+    },
+    {
+      "name": "fucsia #ff0099 sobre negro (footer hover)",
+      "ratio": 5.39,
+      "min": 4.5
+    }
+  ],
+  "photoSeam": [
+    {
+      "src": "assets/images/tee-black.png",
+      "avg": [
+        229,
+        229,
+        229
+      ],
+      "wrap": "rgb(231, 231, 230)",
+      "delta": 2
+    },
+    {
+      "src": "assets/images/tee-sage.png",
+      "avg": [
+        233,
+        233,
+        232
+      ],
+      "wrap": "rgb(231, 231, 230)",
+      "delta": 2
+    },
+    {
+      "src": "assets/images/tee-flamingo.png",
+      "avg": [
+        230,
+        230,
+        229
+      ],
+      "wrap": "rgb(231, 231, 230)",
+      "delta": 1
+    },
+    {
+      "src": "assets/images/tee-04.jpeg",
+      "avg": [
+        228,
+        228,
+        228
+      ],
+      "wrap": "rgb(231, 231, 230)",
+      "delta": 3
+    },
+    {
+      "src": "assets/images/tee-05.jpeg",
+      "avg": [
+        222,
+        222,
+        222
+      ],
+      "wrap": "rgb(231, 231, 230)",
+      "delta": 9
+    },
+    {
+      "src": "assets/images/tee-06.jpeg",
+      "avg": [
+        238,
+        238,
+        237
+      ],
+      "wrap": "rgb(231, 231, 230)",
+      "delta": 7
+    }
+  ],
+  "artifacts": "C:\\Users\\Kalamar\\Documents\\camis\\.tmp\\validation"
+}
